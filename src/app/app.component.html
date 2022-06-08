@@ -1,6 +1,7 @@
 <p>
-  Multiply {{ num }} on {{ multiplier }}
-  Result is {{ num | multi : multiplier }}
+  Multiply using MultiPipe
+  Multiply {{ num }} on {{ multiplier }}<br>
+  Result is {{ num | multi : multiplier }}<br>
 </p>
 
 <button (click)="increaseMultiplier()">
@@ -18,3 +19,15 @@
 <button (click)="decreaseNumber()">
   Decrease number (pipe value)
 </button>
+
+<button (click)="changeRandomProp()">
+  Change random property in component
+</button>
+
+<app-child [childNum]="num" [childMultiplier]="multiplier"></app-child>
+
+<p>
+  Multiply using component function:<br>
+  Multiply {{ num }} on {{ multiplier }}<br>
+  Result is {{ multiply(num, multiplier) }}<br>
+</p>
