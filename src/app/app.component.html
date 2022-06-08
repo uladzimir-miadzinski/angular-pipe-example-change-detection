@@ -1,0 +1,20 @@
+<p>
+  Multiply {{ num }} on {{ multiplier }}
+  Result is {{ num | multi : multiplier }}
+</p>
+
+<button (click)="increaseMultiplier()">
+  Increase multiplier (pipe arg)
+</button>
+
+<button (click)="decreaseMultiplier()">
+  Decrease multiplier (pipe arg)
+</button>
+
+<button (click)="increaseNumber()">
+  Increase number (pipe value)
+</button>
+
+<button (click)="decreaseNumber()">
+  Decrease number (pipe value)
+</button>
